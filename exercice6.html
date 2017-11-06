@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>exercice 6</title>
+</head>
+<body>
+  <input type="checkbox" id="checkbox">J'accepte</input><br/><br/>
+  <button type="button" name="Show" id="button"DISABLED>Validation</button>
+  <script>
+  $(function() {
+    $('#checkbox').click(function(){
+      if(this.checked) {
+        $('#button').attr('disabled', false);
+      } else {
+        $('#button').attr('disabled', true);
+      }
+    });
+  });
+  </script>
+</body>
+</html>

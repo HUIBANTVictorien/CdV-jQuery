@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>exercice 3</title>
+</head>
+<body>
+  <ol class="ol_current">
+    <li>A</li>
+    <li>B</li>
+  </ol>
+  <input id="input_listName" /><button type="button" name="create" id="create">Add</button>
+  <script>
+  $(function() {
+    $('#create').click(function(){
+      $('.ol_current').append($('<li>', {
+        text: $('#input_listName').val()
+      }));
+    });
+  });
+  </script>
+</body>
+</html>

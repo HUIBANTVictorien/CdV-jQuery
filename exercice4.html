@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>exercice 4</title>
+</head>
+<body>
+  <p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <select>
+      <option value="blue" id="blue">Bleu</option>
+      <option value="red" id="red">Rouge</option>
+      <option value="green" id="green">Vert</option>
+    </select>
+    <script>
+    $('select option:selected').each(function() {
+       $('select').change(function () {
+           if($(this).val() == 'blue'){
+               $('#text').css('color', 'blue');
+           }else if($(this).val() == 'red'){
+               $('#text').css('color', 'red');
+           }else if($(this).val() == 'green'){
+               $('#text').css('color', 'green');
+           }
+       }).trigger('change');
+   });
+    </script>
+  </body>
+  </html>
